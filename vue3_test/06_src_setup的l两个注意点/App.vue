@@ -1,0 +1,24 @@
+<template>
+  <Demo @hello="showHelloMsg" msg="好久不见">
+    <span>尚硅谷</span>
+  </Demo>
+</template>
+
+<script>
+import Demo from './components/Demo.vue'
+export default {
+  name: "App",
+  components:{
+    Demo
+  },
+  setup(){
+    function showHelloMsg(value){
+      alert(`你好啊，你触发了hello事件，我收到的参数是：${value}！`);
+    }
+    return {
+      showHelloMsg
+    }
+  }
+};
+</script>
+
